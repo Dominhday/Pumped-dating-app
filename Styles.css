@@ -1,0 +1,510 @@
+@font-face{
+    font-family:'walsheimprolight';
+    src: url(SVN-WalsheimPro-Light.ttf);
+}
+@font-face{
+    font-family: SVNbold;
+    src: url(SVN-SuperDisplay-Bold.ttf);
+}
+@font-face{
+    font-family: welregular;
+    src:url(SVN-WalsheimPro-Regular.ttf)
+}
+@font-face{
+    font-family: walbold;
+    src: url(SVN-WalsheimPro-Bold.ttf);
+}
+@font-face{
+    font-family: sflightita;
+    src: url(SF-Pro-Display-LightItalic.otf);
+}
+@font-face{
+    font-family: walmedium;
+    src: url(SVN-WalsheimPro-Medium.ttf);
+}
+html {
+    width: 100%;
+    height: 100%;
+    animation: stopscroll 3s alternate 1;
+    animation-timing-function: linear;
+}
+.bodydiv{
+    animation: hiddenweb 1.2s alternate 1;
+}
+@keyframes hiddenweb {
+    from { opacity: 0; }
+    to { opacity: 0; }}
+@keyframes stopscroll {
+    from { overflow: hidden;}
+    to { overflow: hidden;}
+}
+/* tắt scrollbar */
+body {
+    -ms-overflow-style: none; /* cho  Internet Explorer, Edge */
+    scrollbar-width: none; /* cho Firefox */
+    overflow-y: scroll; 
+    animation: appear 2s alternate 1;
+    animation-delay: 1.2s;
+}
+body::-webkit-scrollbar {
+    display: none; /* cho Chrome, Safari, and Opera */
+}
+.container{
+    display: block;
+    padding: 0px;
+}
+@keyframes appear {
+    from { opacity: 0% };
+    to { opacity: 100% };
+}
+/* firstflow-menu */
+.container.text-center{
+    position:fixed;
+    z-index: 999;
+    max-width: 100%;
+    background-color: rgba(255, 255, 255, 0.950);
+    /* display: flex;
+    justify-content: space-between; */
+    transition: top 0.3s;
+}
+.box1{
+    display: flex;
+    max-width: 85%;
+    justify-content: space-between;
+    margin: auto;
+}
+/* thanh menu */
+@keyframes movedown {
+    from { transform: translateY(-80px);
+        visibility: visible;z-index: 9999;}
+    to { transform: translateY(0); 
+    visibility: visible;
+     z-index: 9999;}}
+.header_logo{
+    float: left;
+    margin:15px 0px 15px 0px;
+    display: flex;
+    animation: movedown 2s alternate 1;
+    animation-timing-function: linear 50%;
+    animation-delay: 1s;
+}
+.header_menu {
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+}
+.header_login{
+    display: flex;
+}
+.header_login a{
+    display: flex;
+    font-size: 18px;
+    margin: auto;
+    list-style-type: none;
+    animation: movedown 2s alternate 1;
+    animation-timing-function: linear 50%;
+    animation-delay: 1s;
+    display: block;
+}
+.header_login a span{
+    background-color: #DC6E62;
+    float: left;
+    margin-right: 50px;
+    padding: 0.3rem 2em;
+    border-radius: 50px;
+    color: white;
+}
+.header_login a span:hover{
+    background-color: #be5f55;
+}
+.header_menu li{
+    font-size: 18px;
+    margin: auto;
+    padding: 0px 30px;
+    list-style-type: none;
+    display: block;
+    display: flex;
+    animation: movedown 2s alternate 1;
+    animation-timing-function: linear 50%;
+    animation-delay: 1s;
+}
+.header_menu li a:hover{
+    color: #DC6E62;
+    transition-duration: 0.1s;
+}
+.header_menu li a{
+    text-decoration: none;
+    color: black;
+    font-family: 'walsheimprolight';
+}
+.header_menu .login{
+    transform: translateX(400%);
+}
+/* ảnh nền đầu */
+.banner{
+    background-image: url(banner.2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 110vh;
+    display: flex;
+    width: 100%;
+    
+    
+    
+    /* animation */
+    animation: moveup 2s alternate 1;
+    animation-timing-function: linear 20%;
+    animation-delay: 1s;
+    display: flex;
+}
+.banner::before{
+    content: '';
+    position: absolute;
+    background-color: black;
+    width: 100%; height: 110vh; top: 0; left: 0;
+    opacity: .45;
+}
+.overbanner{
+    overflow: hidden;
+}
+.overbanner .explore{
+    padding-top: 36rem;
+}
+@keyframes moveup {
+    from { transform: translateY(1300px); 
+    visibility: visible;;}
+    to { transform: translateY(0);
+        visibility: visible;}
+}
+.banner .text_content{
+    color:white;
+    padding-bottom: 20px;
+    font-family: 'walsheimprolight';
+    text-align: center;
+}
+.explore{
+    display: flex;
+    justify-content:center;
+}
+.banner .text_content h1{
+    display: block;
+}
+.banner .text_content h1 span:hover{
+    background-color: rgb(223, 222, 222);
+    transition-duration: 0.3s;
+}
+.banner .text_content h1 span{
+    font-family: welregular;
+    font-size: 32px;
+    background-color: white;
+    color: #DC6E62;
+    border-radius: 50px;
+    padding: 5px 50px;
+}
+.banner .text_content h4{
+    margin-top: 45px;
+}
+.banner .text_content h4 span{
+    font-family: sflightita;
+    font-size: 24px;
+}
+.banner .text_content span{
+    filter: brightness(100%);
+}
+/* trang hai */
+.firstrow{
+    font-family: walsheimprolight;
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+.textrow2{
+    margin-top: 10rem;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+.textrow2 h4{
+    line-height: 1.6;
+    margin-bottom: 70px;
+    margin-top: 30px;
+}
+.textrow2 h1{
+    color: #DC6E62;
+    font-family: SVNBold;
+    font-size: 80px;
+}
+.firstrow .taotaikhoan{
+    font-size: 20px;
+}
+.firstrow .taotaikhoan span:hover{
+   background-color: #b86259;
+   transition-duration: 0.1s;
+}
+.firstrow .taotaikhoan span{
+    background-color: #DC6E62;
+    float: left;
+    margin-right: 50px;
+    padding: 10px 25px;
+    border-radius: 50px;
+    color: white;
+}
+.firstrow .dangnhap span{
+    border: 2px solid #DC6E62;
+    float: left;
+    border-radius: 50px;
+    margin-right: 50px;
+    padding: 8px 30px;
+    color: #DC6E62;
+}
+.firstrow .dangnhap span:hover{
+    color: white;
+    background-color: #DC6E62;
+    transition-duration: 0.1s;
+}
+.firstrow .dangnhap{
+    font-size: 20px;
+}
+.imagerow2{
+    padding: 0px 10px;
+    display: flex;
+    justify-content: end;
+}
+.tonhat{
+    max-width: 100%;
+}
+.box2{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+.imagerow2{
+    width: 100%;
+}
+/* trang ba */
+.secondrow{
+    display: flex;
+    height: 100%;
+    padding: 0px 0px 30px 0px;
+    width: 100%;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.472), rgba(0, 0, 0, 0.459)), url(antoanhenho.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.box3{
+    width: 95%;
+    margin: auto;
+}
+.textrow3 {
+    padding-bottom: 20%;
+}
+.dongtren{
+    display: flex;
+    width: 100%;
+    justify-content: end;
+}
+.textrow3 h1{
+    color:white;
+    font-family: SVNBold;
+    font-size: 80px;
+    justify-content: end;
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    text-align: end;
+}
+.textrow3 h4{
+    display: flex;
+}
+.textrow3 h4{
+    display: flex;
+}
+.textrow3 li{
+    font-family: walsheimprolight;
+    line-height: 2.0;
+    color: #DC6E62;
+    font-size: px;
+}
+.textrow3 li span{
+    color: white;
+    font-size: 24px;
+}
+.container_image{
+    float: left;
+}
+/* trang bon */
+.thirdrow{
+    display: flex;
+    padding-top: 100px;
+    justify-content: space-between;
+    flex-direction: column;
+    
+}
+.box4{
+    display: flex;
+    flex-direction: column;
+}
+.textrow4{
+    display: flex;
+}
+.textrow4 h1{
+    font-family: SVNBold;
+    color: #DC6E62;
+    font-size: 80px;
+    float: left;
+}
+.textrow4 .text_content4{
+    width: 100%;
+    font-family: walsheimprolight;
+    margin: auto;
+    display: flex;
+    margin-left: 3%;
+}
+.texth4{
+    margin-top: 50px;
+    font-family: welregular;
+    color: #DC6E62;
+    display: flex;
+    font-size: 26px;
+    width: 50%;
+}
+.texth4 span i{
+    vertical-align: middle;
+}
+.texth4 span{
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.335);
+    padding: 0px 10px 4px 300px;
+    margin: auto;
+    border-radius: 50px;
+    display: flex;
+}
+.image_content{
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+.xemthem a{
+    color: #DC6E62;
+    display: flex;
+    justify-content: end;
+    width: 90%;
+    margin: auto;
+    font-size: 24px;
+    font-family: walsheimprolight;
+    padding-bottom: 5%;
+}
+.xemthem i{
+    display: flex;
+    margin: auto 0;
+}
+.xemthem a:hover{
+    color: #a55850;
+}
+/* trang cuoi */
+.fourthrow{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.426), rgba(0, 0, 0, 0.472)), url(taive.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.row5{
+    padding-top: 50px;
+}
+.image5{
+    float: left;
+    margin-right: 50px;
+    margin-bottom: 30px;
+}
+.textrow5{
+    text-align: end;
+}
+.textrow5 .appandgg{
+    margin: 40px 0px;
+}
+.textrow5 h1{
+    text-align: end;
+    color: white;
+    font-size: 80px;
+    font-family: SVNBold;
+    margin-bottom: 0px;
+}
+.textrow5 h5{
+    color: white;
+    font-family: walbold;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.textrow5 h6{
+    color: white;
+    font-size: 16px;
+    font-family: walsheimprolight;
+    line-height: 1.6;
+}
+.textrow5 .h6dautien{
+    margin-bottom: 30px;
+}
+.textrow5 .h6thuhai{
+    margin-bottom: 40px;
+    text-align: end;
+}
+.h6thuba{
+    font-family: walsheimprolight;
+    font-size: 16px;
+    padding-bottom: 30px;
+    color: white;
+    text-align: end;
+}
+.bacot li{
+    color: white;
+    list-style-type: none;
+    font-family: walsheimprolight;
+    line-height: 1.8;
+    text-align: end;
+}
+.bacot li span{
+    font-family: walmedium;
+    font-size: 20px;
+}
+.bacotwid{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+.bacot .floatleft{
+    float: left;
+    margin-left: 30px;
+}
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 45px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #DC6E62;
+    color: white;
+    cursor: pointer;
+    padding: 10px 9px 2px 10px;
+    border-radius: 50px;
+    vertical-align: middle;
+    animation: topanimation 1s alternate infinite;
+}
+@keyframes topanimation {
+    from { transform: translateY(-12px);}
+}
+#myBtn:hover {
+    background-color: #be5f55;
+}
+
+
+
+
+

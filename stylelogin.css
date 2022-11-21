@@ -1,0 +1,200 @@
+@font-face{
+    font-family:SVNBold;
+    src: url(SVN-SuperDisplay-Bold.ttf);
+}
+@font-face{
+    font-family:'wallight';
+    src: url(SVN-WalsheimPro-Light.ttf);
+}
+@font-face{
+    font-family: walregular;
+    src:url(SVN-WalsheimPro-Regular.ttf)
+}
+/* banner */
+body,html{
+    height: 100%;
+    margin: 0;
+}
+.banner_full {
+    background-image: url(banner.2.jpg);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 1s;
+
+    animation-name: animate;
+    animation-direction: alternate-reverse;
+    animation-duration: 30s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function:ease-in-out;
+}
+
+@keyframes animate {
+    0%{
+        background-image: url(bg1.2.jpg);
+    }
+    20%{
+        background-image: url(bg2.2.png);
+    }
+    40%{
+        background-image: url(bg3.2.jpg);
+    }
+    60%{
+        background-image: url(bg4.2.jpg);
+    }
+    80%{
+        background-image: url(bg5.2.jpg);
+    }
+    100%{
+        background-image: url(banner.2.jpg);
+    }
+}
+
+
+
+
+
+
+
+
+.banner_full::before{
+    content: '';
+    position: absolute;
+    background-color: black;
+    width: 100%; height: 100%; top: 0; left: 0;
+    opacity: .50;
+}
+.container{
+    display: flex;
+}
+/* turnback icon */
+
+.turnback a i:hover{
+    color: #b85a50;
+    transition-duration: 0.3s;
+}
+.turnback a i{
+    color:#DC6E62;
+    margin: 10px 0px 0px 20px;
+}
+/* dangnhapbox */
+.box{
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+    width: 500px;
+    position: relative;
+    top: 100px;
+    line-height: 1.2;
+    border-radius: 20px;
+    animation: zoomin 1s alternate ease-out;
+}
+@keyframes zoomin {
+    from { scale: 0; }
+    to { scale: 1; }
+}
+.boxlogin{
+    margin: auto;
+    display: block;
+    padding: auto;
+    text-align: center;
+}
+/* logo */
+.boxlogin h1{
+    font-size: 64px;
+    font-family:SVNBold;
+    color: #DC6E62;
+    margin-bottom: 0px;
+    margin-top: 4px;
+}
+.boxlogin h1 span a{
+    color: #DC6E62;
+}
+.boxlogin .chinhsach a{
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+}
+.boxlogin .chinhsach a:hover{
+    color: #9b4e45;
+}
+/* slogan */
+.boxlogin h6{
+    margin-top: 0px;
+    font-family: wallight;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.870);
+}
+/* chính sách */
+.boxlogin h3{
+    font-family: wallight;
+    font-size: 16px;
+    margin: auto;
+    word-spacing: 0.8px;
+    letter-spacing: 0.4px;
+    color: rgba(0, 0, 0, 0.870);
+    margin-top: 60px;
+}
+/* nd chính sách    */
+.boxlogin h3 a{
+    color: #DC6E62;
+    text-decoration: none;
+    font-family: walregular;
+}
+/* login */
+.boxtt {
+    width: 350px;
+    margin: auto;
+}
+a li {
+    color: black;
+    list-style-type: none;
+}
+a li span {
+    font-family: walregular;
+    font-size: 18px;
+    text-align: center;
+    
+}
+ul:hover{
+    background-color: rgba(0, 0, 0, 0.120);
+    transition-duration: 0.3s;
+}
+.apple ul, .fb ul, .sdt ul {
+    border: 1px solid rgba(0, 0, 0, 0.120);
+    border-radius: 50px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.fa-apple, .fa-facebook-square, .fa-phone {
+    float: left;
+    margin-top: 8px;
+
+}
+.appletext, .fbtext, .sdttext {
+    margin: 5px 0px 10px 0px;
+    vertical-align: middle;
+    text-align: center;
+    padding-right: 20px;
+}
+.apple {
+    margin-top: 30px;
+}
+/* sự cố đăng nhâp */
+a h2{
+    margin: 30px 0px 30px 0px;
+    font-size: 20px;
+    font-family: walregular;
+    color: rgba(0, 0, 0, 0.540);
+    margin-bottom: 50px;
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+a h2:hover{
+    color: black;
+    text-decoration: underline black;
+    transition-duration: 0.3s;
+}
+
